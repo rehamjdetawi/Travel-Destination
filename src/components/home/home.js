@@ -1,26 +1,15 @@
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import Tours from "../tours/Tours";
-import dp from "/home/reham/Travel-Destination/src/data/dp.json"
 
-
-function Home(){
+function Home(props){
 
 return(
-
 <>
 <Header/>
-<Tours data={dp}/>
-
+<Tours data={props.data}/>
 <Footer/>
-
-
 </>
-
-
-
 )
-
-
 }
 export default Home;
