@@ -1,16 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import dp from '../../../data/dp.json';
 import TourDetail from '../../TourDetails/TourDetails'
 
 function Tour(props) {
-   let handelClick=()=>{
-        <TourDetail/>
-    }
+//    let handelClick=()=>{
+//         <TourDetail/>
+//     }
   
     return (
         <>
-            {dp.map(val => {
+        <div key={props.city.id}>
+        <img src={props.city.image}alt={dp.name}/>
+        <h1>Name:{props.city.name}</h1>
+
+
+        </div>
+            {/* {dp.map(val => {
                 return(
                     <div key={val.id}>
                         
@@ -21,7 +27,7 @@ function Tour(props) {
 
                 )
             })
-            }
+            } */}
         </>
 
     )

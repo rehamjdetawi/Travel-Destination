@@ -2,7 +2,7 @@
 import './App.css';
 import Home from './components/home/home';
 import dp from './data/dp.json';
-import TourDetail from './components/TourDetails/TourDetails'
+import TourDetails from './components/TourDetails/TourDetails'
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -12,12 +12,12 @@ function App() {
     <>
     
     <Routes>
-         <Route path='/' element={<Home/>} />
+         <Route path='/' element={<Home data={dp}/>} />
          
-         <Route path='/city/:id' element={<TourDetail data={dp}/>}/>
+         <Route path='/city/:id' element={<TourDetails dp={dp}/>}/>
          
        </Routes>
-       <Home data={dp}/>
+       
     </>
   );
 }
